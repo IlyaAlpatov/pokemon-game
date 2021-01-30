@@ -1,16 +1,23 @@
 import s from './style.module.css';
 
-const HeaderBlock = ({ title, hideBackground = 'false'}) => {
-    const styleRoot = hideBackground ? {backgroundImage = "none"} : "";
+const HeaderBlock = ({ title, descr }) => {
     return (
-        <div>
-            <div>
-                <h1 className = {s.header}> {title} </h1>
-                <p>Simple Triple Triad Cart Game</p>
+        <header class={s.root}>
+            <div class={s.forest}></div>
+            <div class={s.container}>
+                {
+                    title && (<h1>
+                        {title}
+                    </h1>)
+                }
+                {
+                    descr && (<p>
+                        {descr}
+                    </p>)
+                }
             </div>
-        </div>
-    )
+        </header>
+    );
 }
-
 
 export default HeaderBlock;
