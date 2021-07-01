@@ -2,9 +2,9 @@ import s from './style.module.css';
 
 const HeaderBlock = ({ title, descr }) => {
     return (
-        <header class={s.root}>
-            <div class={s.forest}></div>
-            <div class={s.container}>
+        <header className={s.root}>
+            <div className={s.forest}></div>
+            <div className={s.container}>
                 {
                     title && (<h1>
                         {title}
